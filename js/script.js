@@ -1,15 +1,11 @@
 var main = document.getElementById('main');
-console.log(main);
-console.log(main.length);
-var buttonsInsideMain = main.getElementsByClassName('button');
 var buttonsArrayLength = main.getElementsByClassName('button').length;
-console.log(buttonsArrayLength);
-console.log(buttonsInsideMain);
-console.log(typeof buttonsInsideMain);
+
+
+var contentInsideButton = main.getElementsByClassName('button');
 var getButtonsInside = function getButtonInside() {
 
   for (i=0; i< buttonsArrayLength; i++) {
-    var contentInsideButton = main.getElementsByClassName('button');
     alert(contentInsideButton[i].innerText);
   }
 
@@ -17,10 +13,11 @@ var getButtonsInside = function getButtonInside() {
 
 console.log(getButtonsInside(4));
 
+var myButtons = main.getElementsByClassName('button');
+
 var setButtonsStyle = function setButtonsStyle() {
 
   for (i=0; i< buttonsArrayLength; i++) {
-    var myButtons = main.getElementsByClassName('button');
     myButtons[i].style.background = 'navy';
     myButtons[i].style.padding = '15px';
     myButtons[i].style.color = 'orange';
